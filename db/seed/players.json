@@ -1,0 +1,73 @@
+[
+    {
+            "roles": [
+                    "DPS"
+            ],
+            "heroPool": [
+                    "McCree",
+                    "Genji",
+                    "Reaper"
+            ],
+            "username": "user1",
+            "password": "$2a$10$mzy166ztW0nERiBYVYpeEeOYhRnnda124ALbjEy0UJmkXBW6ScyEu",
+            "skillRating": 2500,
+            "email": "testemail@test.com"
+    },
+    {
+            "roles": [
+                    "Tank"
+            ],
+            "heroPool": [
+                    "Winston",
+                    "Reinhardt"
+            ],
+            "username": "user2",
+            "password": "$2a$10$zA2cQsPP7oul12j7PIv0/eiWZrX16oKaEzurG6NHQtHBUXU7DQgha",
+            "skillRating": 3000,
+            "email": "testemail@test.com"
+    },
+    {
+            "roles": [
+                    "Support"
+            ],
+            "heroPool": [
+                    "Mercy",
+                    "Moira",
+                    "Zenyatta"
+            ],
+            "username": "demoUser",
+            "password": "$2a$10$zA2cQsPP7oul12j7PIv0/eiWZrX16oKaEzurG6NHQtHBUXU7DQgha",
+            "skillRating": 2700,
+            "email": "testemail@test.com"
+    },
+    {
+            "roles": [
+                    "Tank",
+                    "Support"
+            ],
+            "heroPool": [
+                    "D Va",
+                    "Winston",
+                    "Moira",
+                    "Zenyatta"
+            ],
+            "username": "tdunk",
+            "password": "$2a$10$AX0p8f.jabmM.Hl2/CmRBey3kjxhL4nz0KSYtUWiAkSqjSUTCHmtW",
+            "skillRating": 2513,
+            "email": "testemail@test.com"
+    },
+    {
+            "roles": [
+                    "Support"
+            ],
+            "heroPool": [
+                    "Brigitte",
+                    "Lúcio",
+                    "Mercy"
+            ],
+            "username": "user4",
+            "password": "$2a$10$oCrC4vy4iJQQ03LN0vIuLOJTBUkBrCRZQUAerKJ7hpBSpeE4Hor8y",
+            "skillRating": 1200,
+            "email": "testemail@test.com"
+    }
+]
