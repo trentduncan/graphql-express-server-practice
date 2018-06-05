@@ -1,0 +1,12 @@
+type Query {
+  getPlayers: [Player!]!
+  hello: String
+}
+
+type Player {
+  username: String!,
+  skillRating: Int,
+  roles: [String],
+  heroPool: [String],
+  email: [String]
+}
