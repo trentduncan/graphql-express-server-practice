@@ -7,6 +7,12 @@ async function getPlayers() {
   return players;
 }
 
+async function getPlayerById({id}) {
+    const player = await Player.findById(id);
+    return player;
+  }
+
 module.exports = {
-  getPlayers
+  getPlayers,
+  getPlayerById
 };
