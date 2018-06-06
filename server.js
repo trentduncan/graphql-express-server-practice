@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 
 
 const {getPlayers, getPlayerById} = require('./resolvers/Queries');
-const {postPlayer} = require('./resolvers/Mutations');
+const {postPlayer, updatePlayer, deletePlayer} = require('./resolvers/Mutations');
 
 // Construct a schema, using GraphQL schema language
 const schema = buildSchema(`
@@ -25,6 +25,16 @@ type Mutation {
     roles: [String],
     heroPool: [String],
     email: String): Player
+
+  updatePlayer(
+    id: ID,
+    username: String,
+    skillRating: Int,
+    roles: [String],
+    heroPool: [String],
+    email: String): Player
+
+  deletePlayer(id: ID): String
 }
 
 type Player {
@@ -44,7 +54,9 @@ const root = {
   },
   getPlayers,
   getPlayerById,
-  postPlayer
+  postPlayer,
+  updatePlayer,
+  deletePlayer
 };
 
 const app = express();

@@ -16,10 +16,27 @@ async function postPlayer({username, password, skillRating, roles, heroPool, ema
     return newPlayer;
   }
   catch (err) {
-    console.log(err);
+    if (err.code === 11000) {
+      err.message = 'username already exists, no duplicates'
+    }
   }
 }
-   
+
+async function updatePlayer({id,username, skillRating, roles, heroPool, email }) {
+    const updatedPlayer = await Player.findByIdAndUpdate(id, {
+    username,
+    skillRating, 
+    roles, 
+    heroPool, 
+    email
+    }, 
+    { new: true});
+    return updatedPlayer;
+}
+
+async function deletePlayer({id}) {
+  return Player.findByIdAndRemove(id);
+}
 
 
 // async function getPlayerById({id}) {
@@ -28,5 +45,7 @@ async function postPlayer({username, password, skillRating, roles, heroPool, ema
 //   }
 
 module.exports = {
-  postPlayer
+  postPlayer,
+  updatePlayer,
+  deletePlayer
 };
