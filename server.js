@@ -18,13 +18,13 @@ type Query {
 }
 
 type Mutation {
-  postPlayer(id: ID
+  postPlayer(
     username: String!,
     password: String!,
     skillRating: Int,
     roles: [String],
     heroPool: [String],
-    email: String): Player!
+    email: String): Player
 }
 
 type Player {
@@ -43,7 +43,8 @@ const root = {
     return 'Hello world!';
   },
   getPlayers,
-  getPlayerById
+  getPlayerById,
+  postPlayer
 };
 
 const app = express();

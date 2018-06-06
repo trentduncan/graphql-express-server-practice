@@ -2,18 +2,22 @@
 const Player = require('../models/player');
 
 
-async function postPlayer({username, password, skillRating, roles, heroPool, email }, root) {
-  console.log(root);
-  const hashedPassword = await Player.hashPassword(password);
-  const newPlayer = await Player.create({
-    username,
-    password: hashedPassword,
-    skillRating, 
-    roles, 
-    heroPool, 
-    email
-  });
-  return newPlayer;
+async function postPlayer({username, password, skillRating, roles, heroPool, email }) {
+  try {
+    const hashedPassword = await Player.hashPassword(password);
+    const newPlayer = await Player.create({
+      username,
+      password: hashedPassword,
+      skillRating, 
+      roles, 
+      heroPool, 
+      email
+    });
+    return newPlayer;
+  }
+  catch (err) {
+    console.log(err);
+  }
 }
    
 
